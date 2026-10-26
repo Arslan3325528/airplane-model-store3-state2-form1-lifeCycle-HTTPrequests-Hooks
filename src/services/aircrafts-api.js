@@ -67,7 +67,7 @@ export async function fetchUsersAircrafts() {
     //! Помилка: 404
     if (error.response?.status === 404) {
       console.log("🅰️xios==>❌error-GETusersAircrafts(404)", error);
-      throw new Error(` Сервер не може знайти дані згідно з запитом: «${url}» ❓🤷‍♀️`);
+      throw new Error(`Сервер не може знайти дані згідно з запитом: «${url}» ❓🤷‍♀️`);
     };
     //! Помилка: Інша помилка
     console.log("🅰️xios==>❌error-GETusersAircrafts(Інша помилка):", error);

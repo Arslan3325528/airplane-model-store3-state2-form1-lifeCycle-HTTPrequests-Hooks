@@ -12,7 +12,8 @@
     gap: 10px;
     justify-content: space-between;
     align-items: center;
-    border: 8px solid #719e7091;
+    /* border: 8px solid #719e7091; */
+    border: 8px solid #9c5419a1;
     border-radius: 16px;
     background-color: #c0dec9e9;
     /* outline: 1px red solid; */
