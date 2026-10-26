@@ -31,7 +31,7 @@ import {
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter basename="/airplane-model-store3-state2-form1-lifeCycle-HTTPrequests">
+    <BrowserRouter basename="/airplane-model-store3-state2-form1-lifeCycle-HTTPrequests-Hooks">
       <ThemeProvider theme={theme}>
         {/* //! Aircrafts */}
         <App />

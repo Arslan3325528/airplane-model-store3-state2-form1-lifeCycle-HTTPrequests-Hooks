@@ -1,6 +1,6 @@
 // import pikachuGif from "../../assets/pikachu-running.gif";
 // або
-// import pikachuGif from "/airplane-model-store3-state2-form1-lifeCycle-HTTPrequests/images/gif/pikachu-running.gif"; //! так НЕ ПРАЦЮЄ на GitHub!!!
+// import pikachuGif from "/airplane-model-store3-state2-form1-lifeCycle-HTTPrequests-Hooks/images/gif/pikachu-running.gif"; //! так НЕ ПРАЦЮЄ на GitHub!!!
 
 import css from "./Loader.module.css";
 
@@ -20,5 +20,5 @@ export const Loader = () => {
 };
 
 //?   import.meta.env — об'єкт із змінними оточеннями, які надає Vite.
-//?   import.meta.env.BASE_URL — автоматично сформоване базове посилання на програму - '/airplane-model-store3-state2-form1-lifeCycle-HTTPrequests/'.
+//?   import.meta.env.BASE_URL — автоматично сформоване базове посилання на програму - '/airplane-model-store3-state2-form1-lifeCycle-HTTPrequests-Hooks/'.
 //?   images / gif / pikachu - running.gif - шлях до GIF всередині папки public.

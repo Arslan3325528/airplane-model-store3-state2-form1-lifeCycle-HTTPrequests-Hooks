@@ -8,7 +8,8 @@ const BASE_URL_AIRCRAFTS = import.meta.env.VITE_API_BASE_URL_AIRCRAFTS;
 
 const ENDPOINT_AIRCRAFTS_DB = "aircraftsDB"; //* незмінна DB (тільки для читання), для оновлення карток в початковий стан
 
-const ENDPOINT_AIRCRAFTS = "aircrafts";
+// const ENDPOINT_AIRCRAFTS = "aircrafts";
+const ENDPOINT_AIRCRAFTS = "aircraftsHooks";
 // const ENDPOINT_AIRCRAFTS = "aircrafts1"; //! ❌ викликає помилку 404
 
 const ENDPOINT_USERS_AIRCRAFTS = "usersAircrafts";
