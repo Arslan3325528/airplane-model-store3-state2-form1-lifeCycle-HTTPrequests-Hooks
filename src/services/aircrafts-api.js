@@ -9,7 +9,7 @@ const BASE_URL_AIRCRAFTS = import.meta.env.VITE_API_BASE_URL_AIRCRAFTS;
 const ENDPOINT_AIRCRAFTS_DB = "aircraftsDB"; //* незмінна DB (тільки для читання), для оновлення карток в початковий стан
 
 // const ENDPOINT_AIRCRAFTS = "aircrafts";
-const ENDPOINT_AIRCRAFTS = "aircraftsHooks";
+const ENDPOINT_AIRCRAFTS = "aircraftsHooks"; 
 // const ENDPOINT_AIRCRAFTS = "aircrafts1"; //! ❌ викликає помилку 404
 
 const ENDPOINT_USERS_AIRCRAFTS = "usersAircrafts";
@@ -51,8 +51,8 @@ export async function fetchAircrafts() {
 
 //? Запит GET на "http://localhost:3000/usersAircrafts"
 export async function fetchUsersAircrafts() {
-  // const url = `${BASE_URL_AIRCRAFTS}${ENDPOINT_USERS_AIRCRAFTS}`;
-  const url = `${BASE_URL_AIRCRAFTS}${ENDPOINT_USERS_AIRCRAFTS_TEST}`; //todo: тестова DB для налаштування логіки запитів
+  const url = `${BASE_URL_AIRCRAFTS}${ENDPOINT_USERS_AIRCRAFTS}`;
+  // const url = `${BASE_URL_AIRCRAFTS}${ENDPOINT_USERS_AIRCRAFTS_TEST}`; //todo: тестова DB для налаштування логіки запитів
 
   try {
     const response = await axios.get(url);
@@ -80,14 +80,10 @@ export async function fetchUsersAircrafts() {
 
 
 //? Запит PATCH на "http://localhost:3000/usersAircrafts/userId"
-// export const updateUserSelectedModels = async (userId, indicesSelectedModels) => {
 export async function updateUserSelectedModels(userId, indicesSelectedModels) {
-  // const url = `${BASE_URL_AIRCRAFTS}${ENDPOINT_USERS_AIRCRAFTS}`;
-  const url = `${BASE_URL_AIRCRAFTS}${ENDPOINT_USERS_AIRCRAFTS_TEST}/${userId}`; //todo: тестова DB для налаштування логіки запитів
+  const url = `${BASE_URL_AIRCRAFTS}${ENDPOINT_USERS_AIRCRAFTS}/${userId}`;
+  // const url = `${BASE_URL_AIRCRAFTS}${ENDPOINT_USERS_AIRCRAFTS_TEST}/${userId}`; //todo: тестова DB для налаштування логіки запитів
   
-  // const response = await axios.patch(url, { indicesSelectedModels });
-  // return response.data;
-
   try {
     const response = await axios.patch(url, { indicesSelectedModels });
     console.log("🅰️xios==>✅response-PATCHusersAircrafts/userId:", response);
@@ -104,10 +100,8 @@ export async function updateUserSelectedModels(userId, indicesSelectedModels) {
 
 //? Запит POST на "http://localhost:3000/usersAircrafts" на додавання нового користувача
 export async function updateUsers(newUser) {
-  // const url = `${BASE_URL_AIRCRAFTS}${ENDPOINT_USERS_AIRCRAFTS}`;
-  const url = `${BASE_URL_AIRCRAFTS}${ENDPOINT_USERS_AIRCRAFTS_TEST}`; //todo: тестова DB для налаштування логіки запитів
-
-  // await axios.post(url, newUser);
+  const url = `${BASE_URL_AIRCRAFTS}${ENDPOINT_USERS_AIRCRAFTS}`;
+  // const url = `${BASE_URL_AIRCRAFTS}${ENDPOINT_USERS_AIRCRAFTS_TEST}`; //todo: тестова DB для налаштування логіки запитів
 
   try {
     await axios.post(url, newUser);
