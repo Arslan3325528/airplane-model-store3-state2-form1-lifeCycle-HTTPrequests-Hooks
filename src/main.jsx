@@ -26,6 +26,7 @@ import {
 
   AppHTTPRequestBasics, //! 6.1.Основи HTTP-запитів у React
   AppHTTPRequestAdvanced, //! 6.2.Архітектура компонентів та станів з HTTP-запитами
+  AppCounter
 } from '@/components/App';
 
 
@@ -34,7 +35,7 @@ createRoot(document.getElementById('root')).render(
     <BrowserRouter basename="/airplane-model-store3-state2-form1-lifeCycle-HTTPrequests-Hooks">
       <ThemeProvider theme={theme}>
         {/* //! Aircrafts */}
-        <App />
+        {/* <App /> */}
         {/* //! State */}
         {/* <AppColorBox />  */}
         {/* //! Debounce */}
@@ -49,6 +50,8 @@ createRoot(document.getElementById('root')).render(
         {/* //! HTTPRequest */}
         {/* <AppHTTPRequestBasics /> */}
         {/* <AppHTTPRequestAdvanced /> */}
+        {/* //! Hooks */}
+        <AppCounter />
       </ThemeProvider>
     </BrowserRouter>
   </StrictMode>
