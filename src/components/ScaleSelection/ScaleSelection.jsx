@@ -51,7 +51,7 @@ export class ScaleSelection extends Component {
       // modelsSelectedScale,
     });
 
-    onGetModelsSelectedScale(modelsSelectedScale); //! підняття стану + передача modelsSelectedScale в App.jsx
+    onGetModelsSelectedScale(modelsSelectedScale, value); //! підняття стану + передача modelsSelectedScale та value в App.jsx
   }
 
   render() {

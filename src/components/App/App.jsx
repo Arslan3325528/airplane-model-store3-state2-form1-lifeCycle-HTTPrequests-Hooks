@@ -387,7 +387,7 @@ export class App extends Component {
 
 
   //! Функція яка отримує масив моделей обраного масштабу з компоненту ScaleSelection та додає його в state
-  getModelsSelectedScale = modelsScale => {
+  getModelsSelectedScale = (modelsScale, scale) => {
     //! Умови за допомогою switch, які відобрадають стан кнопок-фільтрів
     let result = [];
     switch (this.state.activeButton) {
@@ -412,6 +412,7 @@ export class App extends Component {
       aircraftsArr: result,
       aircraftsArrAfterFiltration: result,
       inputSearchValue: "", //! значення inputSearch
+      modelScale: scale, //! початковий масштаб моделі в ScaleSelection
     });
   };
 
@@ -471,7 +472,7 @@ export class App extends Component {
       inputSearchPlaceholder: "Введіть назву ЛА", //! значення placeholder для inputSearch
       inputSearchValueTrigger: false, //! тригер для коректної роботи інпуту після очищення
       modelsSelectedScale: this.state.aircrafts, //! масив моделей обраного масштабу
-      modelScale: "_", //! початковий масштаб моделі в ScaleSelection (для перерендеру)
+      modelScale: "all", //! початковий масштаб моделі в ScaleSelection (для перерендеру)
       modalType: "Login", //! для подальшого вікриття форми Ідентифікації/Аутентифікації (Login) користувача
     }));
 
@@ -505,7 +506,7 @@ export class App extends Component {
       inputSearchPlaceholder: "Введіть назву ЛА", //! значення placeholder для inputSearch
       inputSearchValueTrigger: false, //! тригер для коректної роботи інпуту після очищення
       modelsSelectedScale: this.state.aircrafts, //! масив моделей обраного масштабу
-      modelScale: "__", //! початковий масштаб моделі в ScaleSelection (для перерендеру)
+      modelScale: "all", //! початковий масштаб моделі в ScaleSelection (для перерендеру)
       users,  
       activeUser,
       activeUserId,
@@ -536,7 +537,7 @@ export class App extends Component {
       inputSearchPlaceholder: "Введіть назву ЛА", //! значення placeholder для inputSearch
       inputSearchValueTrigger: false, //! тригер для коректної роботи інпуту після очищення
       modelsSelectedScale: this.state.aircrafts, //! масив моделей обраного масштабу
-      modelScale: "", //! початковий масштаб моделі в ScaleSelection (для перерендеру)
+      modelScale: "all", //! початковий масштаб моделі в ScaleSelection (для перерендеру)
       activeUser: null, //! 🗣 активний (авторизований) користувач
       activeUserId: null, //! #️⃣🗣 індекс Активного (авторизованого) користувача
       isCartButtonDisabled: true, ///! 🔐 тригер блокування кнопки «Кошик»
