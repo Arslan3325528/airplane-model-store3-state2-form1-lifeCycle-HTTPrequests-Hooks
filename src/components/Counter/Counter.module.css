@@ -1,0 +1,49 @@
+.counter {
+    width: 50%;
+    margin: 100px auto;
+    padding: 20px;
+    display: grid;
+    outline: 1px red solid;
+}
+
+.counterValue {
+    width: max-content;
+    margin: 10px auto;
+    padding: 0 20px;
+    display: block;
+    font-size: 4rem;
+    font-weight: 700;
+    border-radius: 8px;
+    color: #159cff;
+    cursor: pointer;
+    background-color: #91d1ff;
+    outline: 1px blue solid;
+}
+
+.counterControls {
+    padding: 5px;
+    display: flex;
+    outline: 1px green solid;
+    text-align: center;
+}
+
+.buttonIncrement {
+    margin: 20px auto;
+    padding: 16px 32px;
+    display: inline-block;
+    align-items: center;
+    font-family: Franklin Gothic Medium, Arial Narrow;
+    font-weight: 700;
+    font-size: 1.5rem;
+    border-radius: 12px;
+    color: #ffffff;
+    cursor: pointer;
+    background-color: #008080;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.4), 2px 2px 4px rgba(0, 0, 0, 0.2), 4px 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 16px 8px rgba(0, 0, 0, 0.3), 0 8px 16px rgba(0, 0, 0, 0.9);
+}
+
+.buttonDecrement {
+    composes: buttonIncrement;
+    background-color: #803a00;
+}

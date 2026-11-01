@@ -1,5 +1,7 @@
-import React, { Component } from "react";
-// import css from "./App.module.css";
+import React from "react";
+
+import { Counter } from '@/components/Counter/Counter.jsx';
+
 
 
 //* ============================ Принцип замикання в JS (Closure) ============================
@@ -180,7 +182,6 @@ greetingJohn(); //! Привіт, John!
 //? Це зручно, коли потрібно створювати функції із заздалегідь заданими параметрами.
 console.log("");
 //todo: ====================================================================
-
 //* =========================================================================================
 
 
@@ -188,25 +189,15 @@ console.log("");
 
 
 
-//! Збільшення/Зменьшення на 1
-// import { Counter } from '@/components/Counter/Counter.jsx';
-
 //! Звичайний компонент
 export function AppCounter() {
-
   return (
-    <div>
-      {/* <div className={css.counter}>
-        <span className={css.counterValue}>0</span>
-        <div className={css.counterControls}>
-            <button className={css.buttonIncrement}>+ 1</button>
-            <button className={css.buttonDecrement}>- 1</button>
-        </div>
-      </div> */}
+    <>
+      <h1 style={{textAlign: "center"}}>Принцип замикання в JS (Closure)</h1>
       {/* <Counter /> */}
       {/* //! Початковий стан лічильника з props */}
-      {/* <Counter initialValue={10} /> */}
-      Принцип замикання в JS (Closure)
-    </div>
+      <Counter initialValue={10} />
+      
+    </>
   );
 };
