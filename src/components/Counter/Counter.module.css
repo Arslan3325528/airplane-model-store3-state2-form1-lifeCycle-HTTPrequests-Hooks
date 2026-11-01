@@ -24,7 +24,6 @@
     padding: 5px;
     display: flex;
     outline: 1px green solid;
-    text-align: center;
 }
 
 .buttonIncrement {

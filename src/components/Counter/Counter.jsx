@@ -1,60 +1,45 @@
-// import React from "react";
-import React, { Component } from "react";
+import React, { useState } from "react";
 import { Controls } from '@/components/Counter/Controls';
 import css from "./Counter.module.css";
 
 
-//! Компонент-клас
-export class Counter extends Component {
-    //! Дефолтні значення props
-    static defaultProps = {
-        initialValue: 9,
-    }
+//! Функціональний компонент
+export function Counter({ initialValue = 9 }) {
 
-    state = {
-        //! Початковий стан лічильника з props
-        value: this.props.initialValue,
-    };
+    const state = useState(0);
+    console.log("⁉️state:", state);
 
-    handleIncrement = () => {
+
+    //! Початковий стан лічильника з props
+    const [value, setValue] = useState(initialValue);
+
+    //! Збільшення значення на 1
+    const handleIncrement = () => {
         console.log("+1");
         //! Оновлення значення від ПОПЕРЕДНЬОГО
-        this.setState(prevState => {
-            return {
-                value: prevState.value + 1,
-            };
-        });
+        setValue(prevValue => prevValue + 1);
     };
 
-    handleDecrement = () => {
+    //! Зменшення значення на 1
+    const handleDecrement = () => {
         console.log("-1");
         //! Оновлення значення від ПОПЕРЕДНЬОГО
-        this.setState(prevState => {
-            return {
-                value: prevState.value - 1,
-            };
-        });
+        setValue(prevValue => prevValue - 1);
     };
 
+    console.log("-------------------- props & state --------------------");
+    console.log("ℹ️ initialValue:", initialValue);
+    console.log("🔢 value:", value);
+    console.log("-------------------------------------------------------");
 
-    render() {
-        const { initialValue } = this.props; //! деструктурізуємо значення props
-        const { value } = this.state; //! деструктурізуємо значення state
+    return (
+        <div className={css.counter}>
+            <span className={css.counterValue}>{value}</span>
 
-        console.log("-------------------- props & state --------------------");
-        console.log("ℹ️initialValue:", initialValue);
-        console.log("🔢value:", value);
-        console.log("-------------------------------------------------------");
-
-        return (
-            <div className={css.counter}>
-                <span className={css.counterValue}>{this.state.value}</span>
-
-                <Controls
-                    onHandleIncrement={this.handleIncrement}
-                    onHandleDecrement={this.handleDecrement}
-                />
-            </div>
-        )
-    }
+            <Controls
+                onHandleIncrement={handleIncrement}
+                onHandleDecrement={handleDecrement}
+            />
+        </div>
+    );
 };
