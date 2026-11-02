@@ -11,16 +11,16 @@ export function CounterReactHooks() {
     // const stateChangingFunction = state[1];
     // console.log("initValue:", initValue);
     //todo: 2 -------------------------------------------
-    const [initValue, setinitValue] = useState("A");
-    console.log("initValue:", initValue);
+    // const [initValue, setinitValue] = useState("A");
+    // console.log("initValue:", initValue);
     //---------------------------------------------------
 
     const [count, setCount] = useState(0);
 
     const handleClick = () => {
         // stateChangingFunction("B"); //todo: 1
-        setinitValue("C"); //todo: 2
-        // setCount(count + 1);
+        // setinitValue("C"); //todo: 2
+        setCount(count + 1);
     };
 
     return (
