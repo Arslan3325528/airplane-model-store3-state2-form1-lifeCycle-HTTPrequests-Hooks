@@ -7,7 +7,7 @@ import css from "./Counter.module.css";
 export function Counter({ initialValue = 9 }) {
 
     const state = useState(0);
-    console.log("⁉️state:", state);
+    console.log("⁉️state:", state); //! [0, ƒ]
 
 
     //! Початковий стан лічильника з props
