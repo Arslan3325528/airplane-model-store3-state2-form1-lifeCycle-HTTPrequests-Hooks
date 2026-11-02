@@ -6,8 +6,8 @@ import css from "./Counter.module.css";
 //! Функціональний компонент
 export function Counter({ initialValue = 9 }) {
 
-    const state = useState(0);
-    console.log("⁉️state:", state); //! [0, ƒ]
+    const state = useState("A");
+    console.log("⁉️state:", state); //! ["A", ƒ]
 
 
     //! Початковий стан лічильника з props
