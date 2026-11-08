@@ -18,7 +18,7 @@ export class CounterReactClass extends Component {
 
         return (
             <div className={css.counter}>
-                Class
+                CounterReactClass
                 <p className={css.counterValue}>
                     Кількість: {count}
                 </p>

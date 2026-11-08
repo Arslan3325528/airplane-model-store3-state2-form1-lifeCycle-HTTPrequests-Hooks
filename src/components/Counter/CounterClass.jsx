@@ -5,7 +5,7 @@ import css from "./Counter.module.css";
 
 
 //! Компонент-клас
-export class Counter extends Component {
+export class CounterClass extends Component {
     //! Дефолтні значення props
     static defaultProps = {
         initialValue: 9,
@@ -48,6 +48,7 @@ export class Counter extends Component {
 
         return (
             <div className={css.counter}>
+                CounterClass
                 <span className={css.counterValue}>{this.state.value}</span>
 
                 <Controls

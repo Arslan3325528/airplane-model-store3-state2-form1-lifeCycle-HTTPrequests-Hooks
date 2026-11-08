@@ -4,7 +4,7 @@ import css from "./Counter.module.css";
 
 
 //! Функціональний компонент
-export function Counter({ initialValue = 9 }) {
+export function CounterHooks({ initialValue = 9 }) {
 
     const state = useState("A");
     console.log("⁉️state:", state); //! ["A", ƒ]
@@ -34,6 +34,7 @@ export function Counter({ initialValue = 9 }) {
 
     return (
         <div className={css.counter}>
+            CounterHooks
             <span className={css.counterValue}>{value}</span>
 
             <Controls

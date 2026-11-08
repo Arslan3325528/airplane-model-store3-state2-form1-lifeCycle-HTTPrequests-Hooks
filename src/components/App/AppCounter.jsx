@@ -2,7 +2,11 @@ import React from "react";
 
 import { CounterReactClass } from '@/components/Counter/CounterReactClass.jsx';
 import { CounterReactHooks } from '@/components/Counter/CounterReactHooks.jsx';
+
 import { Counter } from '@/components/Counter/Counter.jsx';
+
+import { CounterClass } from '@/components/Counter/CounterClass.jsx';
+import { CounterHooks } from '@/components/Counter/CounterHooks.jsx';
 
 
 
@@ -199,10 +203,13 @@ export function AppCounter() {
       <h1 style={{ textAlign: "center" }}>Принцип замикання в JS (Closure)</h1>
       <CounterReactClass />
       <CounterReactHooks />
+
       {/* <Counter /> */}
       {/* //! Початковий стан лічильника з props */}
       {/* <Counter initialValue={10} /> */}
-      
+
+      <CounterClass />
+      <CounterHooks />
     </>
   );
 };
