@@ -23,7 +23,11 @@ export function CounterReactHooks() {
 
         //todo 01: Використовується count із замикання поточного рендеру
         // setCount(count + 1);
+        // setCount(count + 1);
+        // setCount(count + 1);
         //todo 02: Передається React функція, яка отримує актуальне попереднє значення стану
+        // setCount(prevCount => prevCount + 1);
+        // setCount(prevCount => prevCount + 1);
         setCount(prevCount => prevCount + 1);
     };
 
