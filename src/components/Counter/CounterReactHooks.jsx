@@ -20,7 +20,11 @@ export function CounterReactHooks() {
     const handleClick = () => {
         // stateChangingFunction("B"); //todo: 1
         // setinitValue("C"); //todo: 2
-        setCount(count + 1);
+
+        //todo 01: Використовується count із замикання поточного рендеру
+        // setCount(count + 1);
+        //todo 02: Передається React функція, яка отримує актуальне попереднє значення стану
+        setCount(prevCount => prevCount + 1);
     };
 
     return (
