@@ -60,7 +60,7 @@ export class ColorBox1Class extends Component {
         console.log("----------------------------------------------");
 
         return (
-            <>
+            <div className={css.mainContainer}>
                 {/*//! Блок вибору кольорів */}
                 <div className={css.colorBoxContainer}>
                     ColorBox1Class
@@ -116,7 +116,7 @@ export class ColorBox1Class extends Component {
                         ))}
                     </div>
                 </div>
-            </>
+            </div>
         );
     }
 };

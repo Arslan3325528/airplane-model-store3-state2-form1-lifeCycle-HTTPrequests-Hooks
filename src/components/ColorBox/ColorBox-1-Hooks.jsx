@@ -40,7 +40,7 @@ export class ColorBox1Hooks extends Component {
         this.updateSelectedColorElements(this.props.colorBoxes);
     };
 
-    
+
     render() {
         const { colorBoxes } = this.props; //! масив об'єктів всіх елементів(кольорів)
         const {
@@ -60,10 +60,10 @@ export class ColorBox1Hooks extends Component {
         console.log("----------------------------------------------");
 
         return (
-            <>
+            <div className={css.mainContainer}>
                 {/*//! Блок вибору кольорів */}
                 <div className={css.colorBoxContainer}>
-                    ColorBox1Hooks
+                    ColorBox1Class
                     <h2 className={css.colorBoxTitle}>Вибір кольорів</h2>
                     <p className={css.colorBoxDescription}>
                         Останній <u>доданий</u> колір:&nbsp;&nbsp;
@@ -116,7 +116,7 @@ export class ColorBox1Hooks extends Component {
                         ))}
                     </div>
                 </div>
-            </>
+            </div>
         );
     }
 };

@@ -1,4 +1,12 @@
 /*! Блок вибору кольорів */
+.mainContainer {
+    width: max-content;
+    margin: 100px auto;
+    padding: 10px;
+    border-radius: 5px;
+    border: 4px double gray;
+}
+
 .colorBoxContainer {
     width: max-content;
     margin: 100px auto;
