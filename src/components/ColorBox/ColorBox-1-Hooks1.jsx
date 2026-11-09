@@ -24,16 +24,16 @@ export function ColorBox1Hooks1({ colorBoxes }) {
         if (selectedButtonsIdx.find(item => item === index) === undefined) {
             console.log("Такого індекса ще немає,тоді ДОДАЄМО його!✅");
             setActiveButtonIdx(index);
-            setSelectedButtonsIdx(prevSelectedButtonsIdx =>
-                [...prevSelectedButtonsIdx, index].sort((a, b) => a - b)
+            setSelectedButtonsIdx(prevState =>
+                [...prevState, index].sort((a, b) => a - b)
             );
             console.log("Індекс активної кнопки:", index);
         } else {
             console.log("Такий індекс вже є,тоді ВИДАЛЯЄМО його!❌");
             const indexElementRemoved = selectedButtonsIdx.find(item => item === index);
             console.log("Індекс видаляемого елемента:", indexElementRemoved);
-            setSelectedButtonsIdx(prevSelectedButtonsIdx =>
-                prevSelectedButtonsIdx.filter(item => item !== index)
+            setSelectedButtonsIdx(prevState =>
+                prevState.filter(item => item !== index)
             );
         };
     };
