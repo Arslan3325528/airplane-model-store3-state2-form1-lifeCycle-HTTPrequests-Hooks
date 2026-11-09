@@ -26,7 +26,6 @@ export class ColorBox1Class extends Component {
                 selectedButtonsIdx: [...this.state.selectedButtonsIdx, index].sort((a, b) => a - b), //todo-1 ✅
             });
             console.log("Індекс активної кнопки:", index);
-
         } else {
             console.log("Такий індекс вже є,тоді ВИДАЛЯЄМО його!❌");
             const indexElementRemoved = this.state.selectedButtonsIdx.find(item => item === index);
@@ -78,7 +77,8 @@ export class ColorBox1Class extends Component {
                         >
                             {activeButtonIdx !== null
                                 ? colorBoxes[activeButtonIdx].label
-                                : ""}
+                                : ""
+                            }
                         </span>
                     </p>
                     <div className={css.colorBox}>
@@ -89,7 +89,10 @@ export class ColorBox1Class extends Component {
                                 style={{ backgroundColor: color }}
                                 onClick={() => this.setActiveIdx(index)}
                             >
-                                {(selectedButtonsIdx.some(value => value === index)) ? "✅On" : "🆓Off"}
+                                {(selectedButtonsIdx.some(value => value === index))
+                                    ? "✅On"
+                                    : "🆓Off"
+                                }
                             </button>
                         ))}
                     </div>

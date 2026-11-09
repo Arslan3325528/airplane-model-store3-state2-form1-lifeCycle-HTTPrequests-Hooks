@@ -1,6 +1,7 @@
 // import React, { Component } from "react";
 import { ColorBox1Class } from '@/components/ColorBox/ColorBox-1-Class.jsx';
 import { ColorBox1Hooks } from '@/components/ColorBox/ColorBox-1-Hooks.jsx';
+import { ColorBox1Hooks2 } from '@/components/ColorBox/ColorBox-1-Hooks2.jsx';
 import { ColorBoxLifeCycle } from '@/components/ColorBoxLifeCycle/ColorBoxLifeCycle.jsx';
 
 
@@ -21,8 +22,9 @@ export function AppColorBox() {
       {/* <ColorBox colorBoxes={colorBoxOptions} /> */}
       {/* <ColorBoxLifeCycle colorBoxes={colorBoxOptions} /> */}
       {/* //! Hooks */}
-      <ColorBox1Class colorBoxes={colorBoxOptions} />
-      <ColorBox1Hooks colorBoxes={colorBoxOptions} />
+      {/* <ColorBox1Class colorBoxes={colorBoxOptions} /> */}
+      {/* <ColorBox1Hooks colorBoxes={colorBoxOptions} /> */}
+      <ColorBox1Hooks2 colorBoxes={colorBoxOptions} />
     </>
   )
 };
