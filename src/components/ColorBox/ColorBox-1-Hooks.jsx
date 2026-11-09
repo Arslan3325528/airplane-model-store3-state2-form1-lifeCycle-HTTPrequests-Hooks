@@ -25,9 +25,12 @@ export function ColorBox1Hooks({ colorBoxes })  { //* New
         // }));
         // setValue(prevValue => prevValue + 1);
 
-        //* New ❓❓❓ так не працює вірно
-        setSelectedColors(selectedButtonsIdx.flatMap(item =>
-            arr.filter((el, idx) => idx === item))
+        //* New ❓❓❓
+        //! Але так не працює вірно
+        setSelectedColors(
+            selectedButtonsIdx.flatMap(item =>
+                arr.filter((el, idx) => idx === item)
+            )
         );
     };
 
