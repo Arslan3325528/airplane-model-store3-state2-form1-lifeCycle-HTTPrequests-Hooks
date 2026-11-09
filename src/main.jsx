@@ -37,7 +37,7 @@ createRoot(document.getElementById('root')).render(
         {/* //! Aircrafts */}
         {/* <App /> */}
         {/* //! State */}
-        {/* <AppColorBox />  */}
+        <AppColorBox /> 
         {/* //! Debounce */}
         {/* <AppSearchDebounce /> */}
         {/* <AppSearchDebounceTextBacklight /> */}
@@ -51,7 +51,7 @@ createRoot(document.getElementById('root')).render(
         {/* <AppHTTPRequestBasics /> */}
         {/* <AppHTTPRequestAdvanced /> */}
         {/* //! Hooks */}
-        <AppCounter />
+        {/* <AppCounter /> */}
       </ThemeProvider>
     </BrowserRouter>
   </StrictMode>

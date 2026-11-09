@@ -1,5 +1,6 @@
 // import React, { Component } from "react";
-import { ColorBox } from '@/components/ColorBox/ColorBox.jsx';
+import { ColorBox1Class } from '@/components/ColorBox/ColorBox-1-Class.jsx';
+import { ColorBox1Hooks } from '@/components/ColorBox/ColorBox-1-Hooks.jsx';
 import { ColorBoxLifeCycle } from '@/components/ColorBoxLifeCycle/ColorBoxLifeCycle.jsx';
 
 
@@ -15,10 +16,15 @@ const colorBoxOptions = [
 
 //! Звичайний компонент
 export function AppColorBox() {
-    return (
-      // <ColorBox colorBoxes={colorBoxOptions} />
-      <ColorBoxLifeCycle colorBoxes={colorBoxOptions} />
-    )
+  return (
+    <>
+      {/* <ColorBox colorBoxes={colorBoxOptions} /> */}
+      {/* <ColorBoxLifeCycle colorBoxes={colorBoxOptions} /> */}
+      {/* //! Hooks */}
+      <ColorBox1Class colorBoxes={colorBoxOptions} />
+      <ColorBox1Hooks colorBoxes={colorBoxOptions} />
+    </>
+  )
 };
 
 //! Перерендер компонентів відбувається у двох випадках:
