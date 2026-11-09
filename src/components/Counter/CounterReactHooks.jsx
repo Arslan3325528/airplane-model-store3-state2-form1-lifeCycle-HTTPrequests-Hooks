@@ -26,7 +26,7 @@ export function CounterReactHooks() {
         //todo 01: Якщо count дорівнює 0, всі три виклики 
         //todo 01: використовують те саме значення з поточного замикання:
         console.log("count - ДО оновлення:", count); //! 0
-        setCount(count + 1); //! ⚠️
+        // setCount(count + 1); //! ⚠️
         console.log("count - ПІСЛЯ оновлення:", count); //! 0
         //! --- ЧОМУ count НЕ ЗМІНЮЄТЬСЯ УСЕРЕДИНІ СТАРОЇ ФУНКЦІЇ? ---
         //! Тому що setCount не переписує значення змінної count у поточному лексичному оточенні.
@@ -40,7 +40,7 @@ export function CounterReactHooks() {
         //todo 02: Тут prevCount це не змінна з лексичного оточення компонента. 
         //todo 02: React передає їй попереднє значення стану (state) під час обробки оновлення.
         //todo 02: Особливо це важливо, якщо потрібно виконати кілька оновлень поспіль:
-        // setCount(prevCount => prevCount + 1); //* ✅
+        setCount(prevCount => prevCount + 1); //* ✅
         // setCount(prevCount => prevCount + 1);
         // setCount(prevCount => prevCount + 1);
         
