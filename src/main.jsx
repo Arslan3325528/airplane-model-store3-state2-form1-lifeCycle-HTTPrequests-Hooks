@@ -15,7 +15,7 @@ import './index.css'; //! підключення Normalize і Reset CSS
 import {
   App, //! Aircrafts 
 
-  AppColorBox, //! State
+  AppColorBox, //! State + Hooks
 
   AppSearchDebounce, //! Пошук елементів + Debounce
   AppSearchDebounceTextBacklight, //! Пошук елементів + Debounce + Підсвічування тексту
@@ -26,7 +26,9 @@ import {
 
   AppHTTPRequestBasics, //! 6.1.Основи HTTP-запитів у React
   AppHTTPRequestAdvanced, //! 6.2.Архітектура компонентів та станів з HTTP-запитами
-  AppCounter
+  //! Hooks
+  AppCounter,
+  AppUseEffect
 } from '@/components/App';
 
 
@@ -37,7 +39,7 @@ createRoot(document.getElementById('root')).render(
         {/* //! Aircrafts */}
         {/* <App /> */}
         {/* //! State */}
-        <AppColorBox /> 
+        {/* <AppColorBox />  */}
         {/* //! Debounce */}
         {/* <AppSearchDebounce /> */}
         {/* <AppSearchDebounceTextBacklight /> */}
@@ -52,6 +54,8 @@ createRoot(document.getElementById('root')).render(
         {/* <AppHTTPRequestAdvanced /> */}
         {/* //! Hooks */}
         {/* <AppCounter /> */}
+        {/* <AppColorBox />  */}
+        <AppUseEffect />
       </ThemeProvider>
     </BrowserRouter>
   </StrictMode>
