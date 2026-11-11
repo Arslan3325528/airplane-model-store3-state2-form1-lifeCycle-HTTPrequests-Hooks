@@ -24,10 +24,10 @@ export function AppColorBox() {
       {/* <ColorBoxLifeCycle colorBoxes={colorBoxOptions} /> */}
 
       {/* //! Hooks */}
-      {/* <ColorBox1Class colorBoxes={colorBoxOptions} /> */}
+      <ColorBox1Class colorBoxes={colorBoxOptions} />
       <ColorBox1Hooks colorBoxes={colorBoxOptions} />
 
-      <ColorBox1Hooks1 colorBoxes={colorBoxOptions} />
+      {/* <ColorBox1Hooks1 colorBoxes={colorBoxOptions} /> */}
       {/* <ColorBox1Hooks2 colorBoxes={colorBoxOptions} /> */}
     </>
   )

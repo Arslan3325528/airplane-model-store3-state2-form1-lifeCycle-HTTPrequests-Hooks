@@ -1,15 +1,12 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Controls } from '@/components/Counter/Controls';
 import css from "./Counter.module.css";
 
 
 //! Функціональний компонент
-export function CounterHooks({ initialValue = 9 }) {
-
-    const state = useState("A");
-    console.log("⁉️state:", state); //! ["A", ƒ]
-
-
+export function CounterHooks({
+    initialValue = 9 //! Дефолтне значення props
+}) {
     //! Початковий стан лічильника з props
     const [value, setValue] = useState(initialValue);
 
@@ -27,10 +24,11 @@ export function CounterHooks({ initialValue = 9 }) {
         setValue(prevValue => prevValue - 1);
     };
 
-    console.log("-------------------- props & state --------------------");
+    console.log("-------------------- HOOKS: props & state --------------------");
     console.log("ℹ️ initialValue:", initialValue);
     console.log("🔢 value:", value);
-    console.log("-------------------------------------------------------");
+    console.log("--------------------------------------------------------------");
+
 
     return (
         <div className={css.counter}>

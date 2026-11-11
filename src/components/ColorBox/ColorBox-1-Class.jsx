@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import { Component } from 'react';
 import css from "./ColorBox.module.css";
 
 
@@ -10,10 +10,10 @@ export class ColorBox1Class extends Component {
     };
 
     //! Формуємо масив обраних елементів(кольорів)
-    updateSelectedColorElements = (arr) => {
+    updateSelectedColorElements = () => {
         this.setState(prevState => ({
             selectedColors: prevState.selectedButtonsIdx.flatMap(item =>
-                arr.filter((el, idx) => idx === item))
+                this.props.colorBoxes.filter((el, idx) => idx === item))
         }));
     };
 
@@ -36,7 +36,7 @@ export class ColorBox1Class extends Component {
         };
 
         //! Формуємо масив обраних елементів(кольорів)
-        this.updateSelectedColorElements(this.props.colorBoxes);
+        this.updateSelectedColorElements();
     };
 
 
@@ -51,12 +51,12 @@ export class ColorBox1Class extends Component {
         //! Рахуємо кількість обраних кольорів:
         const numberOfColors = selectedButtonsIdx.length;
 
-        console.log("----------------------------------------------");
+        console.log("-------------------- ColorBox1Class --------------------");
         console.log("🔘🆔Активна кнопка:", activeButtonIdx);
         console.log("ℹ️Індекси обраних кнопок:", selectedButtonsIdx);
         console.log("Ⓜ️Масив обраних елементів(кольорів):", selectedColors);
         console.log("🔢Кількість обраних кольорів:", numberOfColors);
-        console.log("----------------------------------------------");
+        console.log("--------------------------------------------------------");
 
         return (
             <div className={css.mainContainer}>

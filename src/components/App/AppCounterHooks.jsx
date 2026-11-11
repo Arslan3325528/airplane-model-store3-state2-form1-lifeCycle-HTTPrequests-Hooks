@@ -205,9 +205,9 @@ export function AppCounterHooks() {
       >
         Принцип замикання в JS (Closure)
       </h1>
-      
-      <CounterReactClass />
-      <CounterReactHooks />
+
+      {/* <CounterReactClass /> */}
+      {/* <CounterReactHooks /> */}
 
       {/* <Counter /> */}
       {/* //! Початковий стан лічильника з props */}

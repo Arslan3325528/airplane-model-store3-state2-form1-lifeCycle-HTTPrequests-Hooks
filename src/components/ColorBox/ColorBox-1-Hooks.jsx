@@ -1,5 +1,5 @@
-// import React, { Component } from 'react'; 
-import React, { useState } from 'react'; //* New
+// import { Component } from 'react'; 
+import { useState } from 'react'; //* New
 import css from "./ColorBox.module.css";
 
 
@@ -19,13 +19,12 @@ export function ColorBox1Hooks({ colorBoxes }) { //* New
 
 
     //! Формуємо масив обраних елементів(кольорів)
-    // updateSelectedColorElements = (arr) => {
-    const updateSelectedColorElements = (arr) => { //* New
+    // updateSelectedColorElements = () => {
+    const updateSelectedColorElements = () => { //* New
         // this.setState(prevState => ({
         //     selectedColors: prevState.selectedButtonsIdx.flatMap(item =>
-        //         arr.filter((el, idx) => idx === item))
+        //         this.props.colorBoxes.filter((el, idx) => idx === item))
         // }));
-        // setValue(prevValue => prevValue + 1);
 
         //* New ❓❓❓
         //! ----- Але так не працює вірно, чому? -----
@@ -40,7 +39,7 @@ export function ColorBox1Hooks({ colorBoxes }) { //* New
         //! selectedButtonsIdx = [2], але selectedColors = [].
         //? 1.Формуємо масив обраних елементів selectedColors
         const newSelectedColors = selectedButtonsIdx.flatMap(item =>
-            arr.filter((el, idx) => idx === item)
+            colorBoxes.filter((el, idx) => idx === item)
         );
         //? 2.Оновлюємо масив обраних елементів selectedColors
         setSelectedColors(newSelectedColors);
@@ -81,8 +80,8 @@ export function ColorBox1Hooks({ colorBoxes }) { //* New
 
 
         //! Оновлюємо масив обраних елементів(кольорів)
-        // this.updateSelectedColorElements(this.props.colorBoxes);
-        updateSelectedColorElements(colorBoxes); //* New
+        // this.updateSelectedColorElements();
+        updateSelectedColorElements(); //* New
     };
 
 
@@ -99,12 +98,12 @@ export function ColorBox1Hooks({ colorBoxes }) { //* New
     //! Рахуємо кількість обраних кольорів:
     const numberOfColors = selectedButtonsIdx.length;
 
-    console.log("----------------------------------------------");
+    console.log("-------------------- ColorBox1Hooks --------------------");
     console.log("🔘🆔Активна кнопка:", activeButtonIdx);
     console.log("ℹ️Індекси обраних кнопок:", selectedButtonsIdx);
     console.log("Ⓜ️Масив обраних елементів(кольорів):", selectedColors);
     console.log("🔢Кількість обраних кольорів:", numberOfColors);
-    console.log("----------------------------------------------");
+    console.log("--------------------------------------------------------");
 
 
     return (
