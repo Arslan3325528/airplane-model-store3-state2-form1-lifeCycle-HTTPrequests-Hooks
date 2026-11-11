@@ -16,7 +16,8 @@ export * from './AppHTTPRequestAdvanced.jsx';
 
 //! Hooks
 export * from './AppCounterHooks.jsx';
-export * from './AppUseEffect.jsx';
+export * from './AppUseEffect1.jsx';
+export * from './AppUseEffect2.jsx';
 
 
 

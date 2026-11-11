@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 
 
-export const AppUseEffect = () => {
+export const AppUseEffect1 = () => {
     const [value, setValue] = useState(0);
     const [showMessage, setShowMessage] = useState(false);
 
