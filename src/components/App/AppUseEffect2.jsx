@@ -5,7 +5,7 @@ export function AppUseEffect2() {
     const [isRunning, setIsRunning] = useState(false);
     const [seconds, setSeconds] = useState(0);
 
-    //todo3: Аналог componentDidMount + componentDidUpdate(за умовою) + componentWillUnmount
+    //todo3: Аналог componentDidUpdate(за умовою) + componentWillUnmount
     //! ----- ЯК ЦЕ ПРАЦЮЄ? -----
     //! 1. Користувач натискає кнопку «Запустити».
     //! 2. isRunning стає true.
@@ -13,11 +13,13 @@ export function AppUseEffect2() {
     //! 4. useEffect запускає setInterval.
     //! 5. Кожну секунду викликається setSeconds, оновлюється інтерфейс.
     //! 6. При натисканні «Зупинити» isRunning стає false.
-    //! 7. ❗️❗️❗️ Перед повторним виконанням ефекту 
-    //!    React викликає попередню функцію очищення, яка зупиняє інтервал.
+    //! 7. ❗️❗️❗️ Перед повторним виконанням ефекту React викликає
+    //!    попередню функцію очищення clearInterval(intervalId), 
+    ///!   яка зупиняє інтервал.
     useEffect(() => {
-        console.log("useEffect: перевіряємо стан таймера");
+        console.log("⚠️useEffect спрацював");
         
+        //? Виключаємо логіку на першому рендері
         if (!isRunning) {
             console.log("❌Таймер відключено.");
             return;

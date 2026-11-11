@@ -29,8 +29,8 @@ import {
   
   //! Hooks
   AppCounterHooks, //! 7.2.Хук useState
-  AppUseEffect1, //! 7.5.Хук useEffect (аналог componentDidMount + componentDidUpdate(за умовою))
-  AppUseEffect2, //! 7.5.Хук useEffect (аналог componentDidMount + componentDidUpdate(за умовою) + componentWillUnmount)
+  AppUseEffect1, //! 7.5.Хук useEffect (аналог componentDidMount + componentDidUpdate(за умовою)
+  AppUseEffect2, //! 7.5.Хук useEffect (аналог componentDidUpdate(за умовою) + componentWillUnmount)
 } from '@/components/App';
 
 
@@ -58,8 +58,8 @@ createRoot(document.getElementById('root')).render(
         {/* <AppCounterHooks />  */}
         {/* <AppColorBox /> */}
         {/* //! Hooks: useEffect */}
-        {/* <AppUseEffect1 /> */}
-        <AppUseEffect2 />
+        <AppUseEffect1 />
+        {/* <AppUseEffect2 /> */}
       </ThemeProvider>
     </BrowserRouter>
   </StrictMode>
