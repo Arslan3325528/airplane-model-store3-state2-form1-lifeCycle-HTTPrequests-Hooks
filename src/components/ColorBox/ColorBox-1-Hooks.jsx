@@ -38,6 +38,7 @@ export function ColorBox1Hooks({ colorBoxes }) { //* New
         //! 4. React виконує повторний рендер
         //! selectedButtonsIdx = [2], але selectedColors = [].
         //? 1.Формуємо масив обраних елементів selectedColors
+        console.log("⬅️selectedButtonsIdx:", selectedButtonsIdx);
         const newSelectedColors = selectedButtonsIdx.flatMap(item =>
             colorBoxes.filter((el, idx) => idx === item)
         );
