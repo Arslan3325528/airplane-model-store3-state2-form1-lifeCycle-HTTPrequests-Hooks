@@ -22,12 +22,13 @@ export function AppColorBox() {
     <>
       {/* <ColorBox colorBoxes={colorBoxOptions} /> */}
       {/* <ColorBoxLifeCycle colorBoxes={colorBoxOptions} /> */}
+
       {/* //! Hooks */}
       {/* <ColorBox1Class colorBoxes={colorBoxOptions} /> */}
-      {/* <ColorBox1Hooks colorBoxes={colorBoxOptions} /> */}
+      <ColorBox1Hooks colorBoxes={colorBoxOptions} />
 
       <ColorBox1Hooks1 colorBoxes={colorBoxOptions} />
-      <ColorBox1Hooks2 colorBoxes={colorBoxOptions} />
+      {/* <ColorBox1Hooks2 colorBoxes={colorBoxOptions} /> */}
     </>
   )
 };
