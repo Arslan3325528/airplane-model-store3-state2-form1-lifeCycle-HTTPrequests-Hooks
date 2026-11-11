@@ -200,7 +200,12 @@ console.log("");
 export function AppCounterHooks() {
   return (
     <>
-      <h1 style={{ textAlign: "center" }}>Принцип замикання в JS (Closure)</h1>
+      <h1
+        style={{ color: "darkgrey", textAlign: "center" }}
+      >
+        Принцип замикання в JS (Closure)
+      </h1>
+      
       <CounterReactClass />
       <CounterReactHooks />
 
