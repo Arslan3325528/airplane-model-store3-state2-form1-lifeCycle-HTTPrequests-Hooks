@@ -29,8 +29,8 @@ import {
   
   //! Hooks
   AppCounterHooks, //! 7.2.Хук useState
-  AppUseEffect1, //! 7.5.Хук useEffect
-  AppUseEffect2, //! 7.5.Хук useEffect
+  AppUseEffect1, //! 7.5.Хук useEffect (аналог componentDidMount + componentDidUpdate(за умовою))
+  AppUseEffect2, //! 7.5.Хук useEffect (аналог componentDidMount + componentDidUpdate(за умовою) + componentWillUnmount)
 } from '@/components/App';
 
 
