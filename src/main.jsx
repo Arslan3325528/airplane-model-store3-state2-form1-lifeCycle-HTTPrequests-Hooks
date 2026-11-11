@@ -27,7 +27,7 @@ import {
   AppHTTPRequestBasics, //! 6.1.Основи HTTP-запитів у React
   AppHTTPRequestAdvanced, //! 6.2.Архітектура компонентів та станів з HTTP-запитами
   //! Hooks
-  AppCounter,
+  AppCounterHooks,
   AppUseEffect
 } from '@/components/App';
 
@@ -53,10 +53,10 @@ createRoot(document.getElementById('root')).render(
         {/* <AppHTTPRequestBasics /> */}
         {/* <AppHTTPRequestAdvanced /> */}
         {/* //! Hooks: useState */}
-        {/* <AppCounter /> */} 
-        <AppColorBox />
+        {/* <AppCounterHooks />  */}
+        {/* <AppColorBox /> */}
         {/* //! Hooks: useEffect */}
-        {/* <AppUseEffect /> */}  
+        <AppUseEffect />
       </ThemeProvider>
     </BrowserRouter>
   </StrictMode>

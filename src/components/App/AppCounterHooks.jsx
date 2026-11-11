@@ -197,7 +197,7 @@ console.log("");
 
 
 //! Звичайний компонент
-export function AppCounter() {
+export function AppCounterHooks() {
   return (
     <>
       <h1 style={{ textAlign: "center" }}>Принцип замикання в JS (Closure)</h1>
