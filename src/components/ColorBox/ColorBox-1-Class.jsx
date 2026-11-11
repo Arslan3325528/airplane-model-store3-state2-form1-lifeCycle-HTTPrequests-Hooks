@@ -20,6 +20,8 @@ export class ColorBox1Class extends Component {
 
     //todo: var.1
     updateSelectedColorElements = () => {
+        //! Тут використовується функціональна форма setState,
+        //! яка яка враховує попереднє оновлення state.selectedButtonsIdx у черзі
         this.setState(prevState => {
             console.log("⬅️prevState.selectedButtonsIdx:", prevState.selectedButtonsIdx);
             return {
@@ -34,6 +36,7 @@ export class ColorBox1Class extends Component {
         //! Перевірка на наявність вже існуючого індексу
         if ((this.state.selectedButtonsIdx.find(item => item === index)) === undefined) {
             console.log("Такого індекса ще немає,тоді ДОДАЄМО його!✅");
+            //! Тут використовується об'єктна форма setState:
             this.setState({
                 activeButtonIdx: index,
                 selectedButtonsIdx: [...this.state.selectedButtonsIdx, index].sort((a, b) => a - b), //todo-1 ✅
@@ -43,6 +46,7 @@ export class ColorBox1Class extends Component {
             console.log("Такий індекс вже є,тоді ВИДАЛЯЄМО його!❌");
             const indexElementRemoved = this.state.selectedButtonsIdx.find(item => item === index);
             console.log("Індекс видаляемого елемента:", indexElementRemoved);
+            //! Тут використовується об'єктна форма setState:
             this.setState({
                 selectedButtonsIdx: this.state.selectedButtonsIdx.filter(item => item !== index),
             });

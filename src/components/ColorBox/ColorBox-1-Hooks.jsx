@@ -27,18 +27,19 @@ export function ColorBox1Hooks({ colorBoxes }) { //* New
         // }));
 
         //* New ❓❓❓
-        //! ----- Але так не працює вірно, чому? -----
+        //! ---------- АЛЕ ТАК НЕ ПРАЦЮЄ ВІРНО, ЧОМУ? ----------
         //! 1. Початковий стан: 
         //! selectedButtonsIdx = [], selectedColors = []
-        //! 2. Користувач натискає кнопку №2
-        //! Викликається setSelectedButtonsIdx([2]).
-        //! 3. Відразу викликається updateSelectedColorElements(colorBoxes)
-        //! Функція бачить старий масив []. 
-        //! Тому selectedcolors залишається порожнім.
-        //! 4. React виконує повторний рендер
+        //! 2. Користувач натискає кнопку №2 і
+        //! викликається setSelectedButtonsIdx([2]) і selectedButtonsIdx = [2].
+        //! 3. Потім відразу викликається функція updateSelectedColorElements(), 
+        //! але функція updateSelectedColorElements() використовую ще старий масив: selectedButtonsIdx = [], 
+        //! тому selectedcolors залишається порожнім.
+        //! 4. Далі React виконує повторний рендер і
         //! selectedButtonsIdx = [2], але selectedColors = [].
         //? 1.Формуємо масив обраних елементів selectedColors
         console.log("⬅️selectedButtonsIdx:", selectedButtonsIdx);
+        //! Тут значення змінної selectedbuttonsidx в поточному рендері ще не змінюється.
         const newSelectedColors = selectedButtonsIdx.flatMap(item =>
             colorBoxes.filter((el, idx) => idx === item)
         );
