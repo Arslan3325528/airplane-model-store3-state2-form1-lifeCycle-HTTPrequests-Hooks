@@ -4,7 +4,8 @@ import css from "./ColorBox.module.css";
 
 
 // export class ColorBox1Hooks extends Component {
-export function ColorBox1Hooks({ colorBoxes })  { //* New
+export function ColorBox1Hooks({ colorBoxes }) { //* New
+    
     // state = {
     //     activeButtonIdx: null, //! індекс обраного елемента
     //     selectedButtonsIdx: [], //! масив індексів обраних елементів
@@ -15,6 +16,7 @@ export function ColorBox1Hooks({ colorBoxes })  { //* New
     const [activeButtonIdx, setActiveButtonIdx] = useState(null); //! індекс обраного елемента
     const [selectedButtonsIdx, setSelectedButtonsIdx] = useState([]); //! масив індексів обраних елементів
     const [selectedColors, setSelectedColors] = useState([]); //! масив обраних елементів згідно масиву індексів
+
 
     //! Формуємо масив обраних елементів(кольорів)
     // updateSelectedColorElements = (arr) => {
@@ -27,12 +29,14 @@ export function ColorBox1Hooks({ colorBoxes })  { //* New
 
         //* New ❓❓❓
         //! Але так не працює вірно
-        setSelectedColors(
-            selectedButtonsIdx.flatMap(item =>
-                arr.filter((el, idx) => idx === item)
-            )
+        //? 1.Формуємо масив обраних елементів selectedColors
+        const newSelectedColors = selectedButtonsIdx.flatMap(item =>
+            colorBoxes.filter((el, idx) => idx === item)
         );
+        //? 2.Оновлюємо масив обраних елементів selectedColors
+        setSelectedColors(newSelectedColors);
     };
+
 
     // setActiveIdx = index => {
     const setActiveIdx = index => {
@@ -66,7 +70,8 @@ export function ColorBox1Hooks({ colorBoxes })  { //* New
             setSelectedButtonsIdx(selectedButtonsIdx.filter(item => item !== index))
         };
 
-        //! Формуємо масив обраних елементів(кольорів)
+
+        //! Оновлюємо масив обраних елементів(кольорів)
         // this.updateSelectedColorElements(this.props.colorBoxes);
         updateSelectedColorElements(colorBoxes); //* New
     };
@@ -80,6 +85,8 @@ export function ColorBox1Hooks({ colorBoxes })  { //* New
     //         selectedColors
     //     } = this.state;
 
+
+
         //! Рахуємо кількість обраних кольорів:
         const numberOfColors = selectedButtonsIdx.length;
 
@@ -90,6 +97,7 @@ export function ColorBox1Hooks({ colorBoxes })  { //* New
         console.log("🔢Кількість обраних кольорів:", numberOfColors);
         console.log("----------------------------------------------");
 
+    
         return (
             <div className={css.mainContainer}>
                 {/*//! Блок вибору кольорів */}

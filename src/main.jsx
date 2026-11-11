@@ -47,15 +47,16 @@ createRoot(document.getElementById('root')).render(
         {/* <AppUncontrolledElementsForm onSubmit={values => console.log(values)} /> */}
         {/* <AppControlledElementsForm /> */}
         {/* <AppComplexForms onSubmit={values => console.log(values)} /> */}
-        {/* //! Life Cycle*/}
+        {/* //! Life Cycle */}
         {/* <AppComplexForms /> */}
         {/* //! HTTPRequest */}
         {/* <AppHTTPRequestBasics /> */}
         {/* <AppHTTPRequestAdvanced /> */}
-        {/* //! Hooks */}
-        {/* <AppCounter /> */}
-        {/* <AppColorBox />  */}
-        <AppUseEffect />
+        {/* //! Hooks: useState */}
+        {/* <AppCounter /> */} 
+        <AppColorBox />
+        {/* //! Hooks: useEffect */}
+        {/* <AppUseEffect /> */}  
       </ThemeProvider>
     </BrowserRouter>
   </StrictMode>

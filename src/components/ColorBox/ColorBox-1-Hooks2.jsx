@@ -8,7 +8,7 @@ export function ColorBox1Hooks2({ colorBoxes }) {
     const [selectedButtonsIdx, setSelectedButtonsIdx] = useState([]); //! масив індексів обраних елементів
 
 
-    //! Формуємо масив обраних елементів(кольорів)
+    //! Формуємо та оновлюємо масив обраних елементів(кольорів) з useMemo
     const selectedColors = useMemo(() => {
         return selectedButtonsIdx.flatMap(item =>
             colorBoxes.filter((el, idx) => idx === item)
