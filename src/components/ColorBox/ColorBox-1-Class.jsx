@@ -10,11 +10,24 @@ export class ColorBox1Class extends Component {
     };
 
     //! Формуємо масив обраних елементів(кольорів)
+    //todo: var.1
+    // updateSelectedColorElements = () => {
+    //     this.setState(prevState => ({
+    //         selectedColors: prevState.selectedButtonsIdx.flatMap(item =>
+    //             this.props.colorBoxes.filter((el, idx) => idx === item))
+    //     }));
+    // };
+
+    //todo: var.1
     updateSelectedColorElements = () => {
-        this.setState(prevState => ({
-            selectedColors: prevState.selectedButtonsIdx.flatMap(item =>
-                this.props.colorBoxes.filter((el, idx) => idx === item))
-        }));
+        this.setState(prevState => {
+            console.log("⬅️prevState.selectedButtonsIdx:", prevState.selectedButtonsIdx);
+            return {
+                selectedColors: prevState.selectedButtonsIdx.flatMap(item =>
+                    this.props.colorBoxes.filter((el, idx) => idx === item)
+                )
+            };
+        });
     };
 
     setActiveIdx = index => {
