@@ -43,8 +43,10 @@ export const AppUseEffect1 = () => {
         <div style={{ maxWidth: "50%", display: "grid", margin: "0 auto"}}>
             <h1
                 style={{ color: "darkgrey", textAlign: "center" }}
-            >Вивчаємо useEffect
+            >
+                Вивчаємо useEffect-1
             </h1>
+            <br />
 
             <h2
                 style={{ color: "darkblue", textAlign: "center" }}
