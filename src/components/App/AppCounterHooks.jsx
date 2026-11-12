@@ -1,14 +1,17 @@
 import React from "react";
 
+//todo: OLD
+import { Counter } from '@/components/Counter/Counter.jsx';
+
+//!  3.1.Як працює хук useState. Замінюємо класи на хуки
 import { CounterReactClass } from '@/components/Counter/CounterReactClass.jsx';
 import { CounterReactHooks } from '@/components/Counter/CounterReactHooks.jsx';
 
-import { Counter } from '@/components/Counter/Counter.jsx';
-
+//! 3.2.Замінюємо класи на хуки
 import { CounterClass } from '@/components/Counter/CounterClass.jsx';
 import { CounterHooks } from '@/components/Counter/CounterHooks.jsx';
 
-//! Таймер
+//! 4.4.Демонстрація роботи componentWillUnmount() та заміна на хуки
 import { ClockClass } from '@/components/Clock/ClockClass.jsx';
 import { ClockContainerClass } from '@/components/Clock/ClockContainerClass.jsx';
 
@@ -207,19 +210,23 @@ export function AppCounterHooks() {
       <h1
         style={{ color: "darkgrey", textAlign: "center" }}
       >
-        Принцип замикання в JS (Closure)
+        Принцип замикання в JS (Closure) + Hooks
       </h1>
 
+      {/* //todo: OLD */}
+      {/* <Counter /> */}
+      {/* // Початковий стан лічильника з props */}
+      {/* <Counter initialValue={10} /> */}
+
+      {/* //!  3.1.Як працює хук useState. Замінюємо класи на хуки */}
       {/* <CounterReactClass /> */}
       {/* <CounterReactHooks /> */}
 
-      {/* <Counter /> */}
-      {/* //! Початковий стан лічильника з props */}
-      {/* <Counter initialValue={10} /> */}
-
+      {/* //! 3.2.Замінюємо класи на хуки */}
       {/* <CounterClass /> */}
       {/* <CounterHooks /> */}
 
+      {/* //! 4.4.Демонстрація роботи componentWillUnmount() та заміна на хуки. Замінюємо класи на хуки */}
       {/* <ClockClass /> */}
       <ClockContainerClass />
       
