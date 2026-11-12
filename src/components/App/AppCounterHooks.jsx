@@ -12,8 +12,13 @@ import { CounterClass } from '@/components/Counter/CounterClass.jsx';
 import { CounterHooks } from '@/components/Counter/CounterHooks.jsx';
 
 //! 4.4.Демонстрація роботи componentWillUnmount() та заміна на хуки
-import { ClockClass } from '@/components/Clock/ClockClass.jsx';
-import { ClockContainerClass } from '@/components/Clock/ClockContainerClass.jsx';
+import {
+  ClockClass,
+  ClockContainerClass,
+  ClockHooks,
+  ClockContainerHooks
+} from '@/components/Clock';
+
 
 
 
@@ -229,6 +234,7 @@ export function AppCounterHooks() {
       {/* //! 4.4.Демонстрація роботи componentWillUnmount() та заміна на хуки. Замінюємо класи на хуки */}
       {/* <ClockClass /> */}
       <ClockContainerClass />
+      <ClockContainerHooks />
       
     </>
   );
