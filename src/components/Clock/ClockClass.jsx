@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import css from "./Clock.module.css";
 
-export class Clock extends Component {
+
+export class ClockClass extends Component {
   state = {
     time: new Date().toLocaleTimeString(),
   };

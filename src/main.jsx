@@ -55,10 +55,10 @@ createRoot(document.getElementById('root')).render(
         {/* <AppHTTPRequestBasics /> */}
         {/* <AppHTTPRequestAdvanced /> */}
         {/* //! Hooks: useState */}
-        {/* <AppCounterHooks />  */}
+        <AppCounterHooks /> 
         {/* <AppColorBox /> */}
         {/* //! Hooks: useEffect */}
-        <AppUseEffect1 />
+        {/* <AppUseEffect1 /> */}
         {/* <AppUseEffect2 /> */}
       </ThemeProvider>
     </BrowserRouter>

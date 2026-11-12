@@ -8,6 +8,10 @@ import { Counter } from '@/components/Counter/Counter.jsx';
 import { CounterClass } from '@/components/Counter/CounterClass.jsx';
 import { CounterHooks } from '@/components/Counter/CounterHooks.jsx';
 
+//! Таймер
+import { ClockClass } from '@/components/Clock/ClockClass.jsx';
+import { ClockContainerClass } from '@/components/Clock/ClockContainerClass.jsx';
+
 
 
 
@@ -213,8 +217,12 @@ export function AppCounterHooks() {
       {/* //! Початковий стан лічильника з props */}
       {/* <Counter initialValue={10} /> */}
 
-      <CounterClass />
-      <CounterHooks />
+      {/* <CounterClass /> */}
+      {/* <CounterHooks /> */}
+
+      {/* <ClockClass /> */}
+      <ClockContainerClass />
+      
     </>
   );
 };

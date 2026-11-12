@@ -10,7 +10,7 @@ import { ComplexFormsGenerationIDRadioButton } from '@/components/ComplexFormsGe
 import { ComplexFormsGenerationIDRadioButtonCheckboxesSelect } from '@/components/ComplexFormsGenerationIDRadioButtonCheckboxesSelect/ComplexFormsGenerationIDRadioButtonCheckboxesSelect.jsx';
 import { Modal } from '@/components/Modal/Modal.jsx';
 import { ColorBoxLifeCycle } from '@/components/ColorBoxLifeCycle/ColorBoxLifeCycle.jsx';
-import { Clock} from '@/components/Clock/Clock.jsx';
+import { ClockClass } from '@/components/Clock/ClockClass.jsx';
 // import css from "./AppComplexForms.module.css";
 
 const colorBoxOptions = [
@@ -124,7 +124,7 @@ export class AppComplexForms extends Component {
         >
           Старт/Стоп таймер
         </button> */}
-        {/* {showModal &&<Clock />} */}
+        {/* {showModal &&<ClockClass />} */}
       </>
     );
   }
