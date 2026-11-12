@@ -90,7 +90,7 @@ export function ColorBox1Hooks1({ colorBoxes }) {
         <div className={css.mainContainer}>
             {/*//! Блок вибору кольорів */}
             <div className={css.colorBoxContainer}>
-                ColorBox1Hooks1 з useEffect
+                ✅ColorBox1Hooks1 з useEffect
                 <h2 className={css.colorBoxTitle}>Вибір кольорів</h2>
                 <p className={css.colorBoxDescription}>
                     Останній <u>доданий</u> колір:&nbsp;&nbsp;

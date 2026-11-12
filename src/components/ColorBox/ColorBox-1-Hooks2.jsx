@@ -51,7 +51,7 @@ export function ColorBox1Hooks2({ colorBoxes }) {
         <div className={css.mainContainer}>
             {/*//! Блок вибору кольорів */}
             <div className={css.colorBoxContainer}>
-                ColorBox1Hooks2 з useMemo
+                ✅ColorBox1Hooks2 з useMemo
                 <h2 className={css.colorBoxTitle}>Вибір кольорів</h2>
                 <p className={css.colorBoxDescription}>
                     Останній <u>доданий</u> колір:&nbsp;&nbsp;

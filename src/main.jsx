@@ -56,9 +56,9 @@ createRoot(document.getElementById('root')).render(
         {/* <AppHTTPRequestAdvanced /> */}
         {/* //! Hooks: useState */}
         {/* <AppCounterHooks />  */}
-        <AppColorBox />
+        {/* <AppColorBox /> */}
         {/* //! Hooks: useEffect */}
-        {/* <AppUseEffect1 /> */}
+        <AppUseEffect1 />
         {/* <AppUseEffect2 /> */}
       </ThemeProvider>
     </BrowserRouter>

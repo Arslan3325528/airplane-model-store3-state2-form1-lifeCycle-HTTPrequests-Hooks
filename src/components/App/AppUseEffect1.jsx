@@ -80,7 +80,7 @@ export const AppUseEffect1 = () => {
             <button
                 onClick={() => setShowMessage(!showMessage)}
             >
-                Показати / приховати повідомлення
+                Показати/приховати повідомлення
             </button>
 
             {showMessage && (
