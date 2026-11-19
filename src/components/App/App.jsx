@@ -164,7 +164,7 @@ export class App extends Component {
     //! Прокрутити сторінку вгору
     this.windowSrollTo();
     console.log("Клік в кнопку Літаки");
-    const onlyPlanes = this.state.modelsSelectedScale.filter(aircraft => aircraft.aircraftType === "plane"); //! з додаванням вибору моделей певного масштабу
+    const onlyPlanes = this.state.modelsSelectedScale.filter(aircraft => (aircraft.aircraftType === "plane" || aircraft.aircraftType === "tiltrotor")); //! з додаванням вибору моделей певного масштабу
     console.log("onlyPlanes:", onlyPlanes);
     this.setState({
       aircraftsArr: onlyPlanes,
@@ -198,7 +198,7 @@ export class App extends Component {
     //! Прокрутити сторінку вгору
     this.windowSrollTo();
     console.log("Клік в кнопку Вертольоти");
-    const onlyHelicopters = this.state.modelsSelectedScale.filter(aircraft => aircraft.aircraftType === "helicopter"); //! з додаванням вибору моделей певного масштабу
+    const onlyHelicopters = this.state.modelsSelectedScale.filter(aircraft => (aircraft.aircraftType === "helicopter" || aircraft.aircraftType === "tiltrotor")); //! з додаванням вибору моделей певного масштабу
     console.log("onlyHelicopters:", onlyHelicopters);
     this.setState({
       aircraftsArr: onlyHelicopters,

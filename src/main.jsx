@@ -39,7 +39,7 @@ createRoot(document.getElementById('root')).render(
     <BrowserRouter basename="/airplane-model-store3-state2-form1-lifeCycle-HTTPrequests-Hooks">
       <ThemeProvider theme={theme}>
         {/* //! Aircrafts */}
-        {/* <App /> */}
+        <App />
         {/* //! State */}
         {/* <AppColorBox />  */}
         {/* //! Debounce */}
@@ -58,7 +58,7 @@ createRoot(document.getElementById('root')).render(
         {/* <AppCounterHooks />  */}
         {/* <AppColorBox /> */}
         {/* //! Hooks: useEffect */}
-        <AppUseEffect1 />
+        {/* <AppUseEffect1 /> */}
         {/* <AppUseEffect2 /> */}
       </ThemeProvider>
     </BrowserRouter>

@@ -8,6 +8,8 @@ export function getAircraftTitleBgColor(type) {
             return "helicopterTitle";
         case 'biplane':
             return "biplaneTitle";
+        case 'tiltrotor':
+            return "tiltrotorTitle";
         default:
             return "baseTitle";
     }

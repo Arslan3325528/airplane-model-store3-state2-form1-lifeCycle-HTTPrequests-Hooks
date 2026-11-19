@@ -10,7 +10,7 @@
     text-align: center;
     border: 1px solid #5d5d5d;
     border-radius: 8px;
-    background-color: grey;
+    background-color: #d3d3d3;
     color: blue;
 }
 .planeTitle {
@@ -28,6 +28,11 @@
     composes: baseTitle;
     border-color: #ff295d;
     background-color: #f59aa9;
+}
+.tiltrotorTitle {
+    composes: baseTitle;
+    border-color: black;
+    background: linear-gradient(90deg, #9accf5 30%, yellow 100%);
 }
 
 .baseTitleNumberModels {
