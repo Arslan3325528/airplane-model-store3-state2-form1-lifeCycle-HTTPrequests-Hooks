@@ -32,7 +32,8 @@
 .tiltrotorTitle {
     composes: baseTitle;
     border-color: black;
-    background: linear-gradient(90deg, #9accf5 30%, yellow 100%);
+    /* background: linear-gradient(90deg, #9accf5 30%, yellow 100%); */
+    background: linear-gradient(183deg, #9accf5 35%, yellow 100%);
 }
 
 .baseTitleNumberModels {
