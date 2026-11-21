@@ -55,8 +55,8 @@ createRoot(document.getElementById('root')).render(
         {/* <AppHTTPRequestBasics /> */}
         {/* <AppHTTPRequestAdvanced /> */}
         {/* //! Hooks: useState */}
-        <AppCounterHooks /> 
-        {/* <AppColorBox /> */}
+        {/* <AppCounterHooks />  */}
+        <AppColorBox />
         {/* //! Hooks: useEffect як аналог componentDidMount() + componentDidUpdate() */}
         {/* <AppUseEffect1 /> */}
         {/* //! Hooks: useEffect як аналог componentDidUpdate() + componentWillUnmount() */}

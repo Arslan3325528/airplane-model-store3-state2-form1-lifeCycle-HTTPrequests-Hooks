@@ -9,7 +9,7 @@ import { ComplexFormsGenerationID } from '@/components/ComplexFormsGenerationID/
 import { ComplexFormsGenerationIDRadioButton } from '@/components/ComplexFormsGenerationIDRadioButton/ComplexFormsGenerationIDRadioButton.jsx';
 import { ComplexFormsGenerationIDRadioButtonCheckboxesSelect } from '@/components/ComplexFormsGenerationIDRadioButtonCheckboxesSelect/ComplexFormsGenerationIDRadioButtonCheckboxesSelect.jsx';
 import { Modal } from '@/components/Modal/Modal.jsx';
-import { ColorBoxLifeCycle } from '@/components/ColorBoxLifeCycle/ColorBoxLifeCycle.jsx';
+import { ColorBoxLifeCycleClass } from '@/components/ColorBoxLifeCycle/ColorBoxLifeCycleClass.jsx';
 import { ClockClass } from '@/components/Clock/ClockClass.jsx';
 // import css from "./AppComplexForms.module.css";
 
@@ -116,7 +116,7 @@ export class AppComplexForms extends Component {
             </button>
           </Modal>}
         {/*//! Color Boxes */}
-        <ColorBoxLifeCycle colorBoxes={colorBoxOptions} />
+        <ColorBoxLifeCycleClass colorBoxes={colorBoxOptions} />
         {/*//! Таймер */}
         {/* <button
           type="button"

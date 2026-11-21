@@ -6,7 +6,9 @@ import { ColorBox1HooksNew } from '@/components/ColorBox/ColorBox-1-HooksNew.jsx
 import { ColorBox1HooksUseEffect } from '@/components/ColorBox/ColorBox-1-HooksUseEffect.jsx';
 import { ColorBox1HooksUseMemo } from '@/components/ColorBox/ColorBox-1-HooksUseMemo.jsx';
 
-import { ColorBoxLifeCycle } from '@/components/ColorBoxLifeCycle/ColorBoxLifeCycle.jsx';
+import { ColorBoxLifeCycleClass } from '@/components/ColorBoxLifeCycle/ColorBoxLifeCycleClass.jsx';
+import { ColorBoxLifeCycleHooks } from '@/components/ColorBoxLifeCycle/ColorBoxLifeCycleHooks.jsx';
+import { ColorBoxLifeCycleHooksUseRef } from '@/components/ColorBoxLifeCycle/ColorBoxLifeCycleHooksUseRef.jsx';
 
 
 const colorBoxOptions = [
@@ -24,17 +26,21 @@ export function AppColorBox() {
   return (
     <>
       {/* <ColorBox colorBoxes={colorBoxOptions} /> */}
-      {/* <ColorBoxLifeCycle colorBoxes={colorBoxOptions} /> */}
-
+      
       {/* //! Hooks: useState*/}
-      <ColorBox1Class colorBoxes={colorBoxOptions} />
-      <ColorBox1Hooks colorBoxes={colorBoxOptions} />
-      <ColorBox1HooksNew colorBoxes={colorBoxOptions} />
+      {/* <ColorBox1Class colorBoxes={colorBoxOptions} /> */}
+      {/* <ColorBox1Hooks colorBoxes={colorBoxOptions} /> */}
+      {/* <ColorBox1HooksNew colorBoxes={colorBoxOptions} /> */}
 
       {/* //! Hooks: useState + useEffect */}
-      <ColorBox1HooksUseEffect colorBoxes={colorBoxOptions} />
+      {/* <ColorBox1HooksUseEffect colorBoxes={colorBoxOptions} /> */}
       {/* //! Hooks: useState + useMemo */}
-      <ColorBox1HooksUseMemo colorBoxes={colorBoxOptions} />
+      {/* <ColorBox1HooksUseMemo colorBoxes={colorBoxOptions} /> */}
+      
+      {/* //! Hooks: useState + useEffect + кастомні хуки */}
+      {/* <ColorBoxLifeCycleClass colorBoxes={colorBoxOptions} /> */}
+      <ColorBoxLifeCycleHooks colorBoxes={colorBoxOptions} />
+      {/* <ColorBoxLifeCycleHooksUseRef colorBoxes={colorBoxOptions} /> */}
     </>
   )
 };

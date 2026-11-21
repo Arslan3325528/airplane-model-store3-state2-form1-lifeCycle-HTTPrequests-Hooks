@@ -1,24 +1,13 @@
-import React, { Component, PureComponent} from 'react';
+import React, { Component } from 'react';
 import css from "./ColorBoxLifeCycle.module.css";
 
 
-export class ColorBoxLifeCycle extends Component {
-// export class ColorBoxLifeCycle extends PureComponent {
+export class ColorBoxLifeCycleClass extends Component {
     state = {
         activeButtonIdx: null,
-        // selectedButtonsIdx: [], //! масив індексів обраних елементів
         //! 1.localStorage - Ініціалізація state з localStorage
         selectedButtonsIdx: JSON.parse(localStorage.getItem("selectedIdx")) || [], //! масив індексів обраних елементів
     };
-
-    //! shouldComponentUpdate - тільки для демонстрації роботи
-    // shouldComponentUpdate(nextProps, nextState) {
-    //     console.log("🚹❗️.shouldComponentUpdate");
-    //     console.log("🎯nextState.activeButtonIdx:", nextState.activeButtonIdx);
-    //     console.log("🎯this.state.activeButtonIdx:", this.state.activeButtonIdx);
-    //     console.log("🎯🎯Оновлення компонента", !!(nextState.activeButtonIdx !== this.state.activeButtonIdx));
-    //     return nextState.activeButtonIdx !== this.state.activeButtonIdx;
-    // };
 
     //! 2.localStorage - Створення запису в localStorage під час першого запуску якщо його немає
     componentDidMount() { //todo: звичайний метод класу
@@ -84,23 +73,27 @@ export class ColorBoxLifeCycle extends Component {
     };
 
     render() {
-        console.log("0️⃣❗️.render");
+        console.log("0️⃣❗️.render - ColorBoxLifeCycleClass");
         const { colorBoxes } = this.props; //! масив об'єктів всіх елементів(кольорів)
         const { activeButtonIdx, selectedButtonsIdx } = this.state;
 
         //! Формуємо масив обраних елементів(кольорів) не зберігаючи його в state:
         const selectedColors = selectedButtonsIdx.map(idx => colorBoxes[idx]);
+
         //! Рахуємо кількість обраних кольорів:
         const numberOfColors = selectedButtonsIdx.length;
 
+        console.log("-----------------ColorBoxLifeCycleClass-----------------");
         console.log("🔘🆔Активна кнопка:", activeButtonIdx);
         console.log("ℹ️Індекси обраних кнопок:", selectedButtonsIdx);
         console.log("Ⓜ️Масив обраних елементів(кольорів):", selectedColors);
         console.log("🔢Кількість обраних кольорів:", numberOfColors);
-        console.log("----------------------------------------------");
+        console.log("--------------------------------------------------------");
+
 
         return (
             <div className={css.parentContainer}>
+                ColorBoxLifeCycleClass
                 {/*//! Блок вибору кольорів */}
                 <div className={css.colorBoxContainer}>
                     <h2 className={css.colorBoxTitle}>Вибір кольорів</h2>
@@ -117,7 +110,8 @@ export class ColorBoxLifeCycle extends Component {
                         >
                             {activeButtonIdx !== null
                                 ? colorBoxes[activeButtonIdx].label
-                                : ""}
+                                : ""
+                            }
                         </span>
                     </p>
                     <div className={css.colorBox}>
