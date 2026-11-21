@@ -29,8 +29,8 @@ export function AppUseEffect2() {
 
         //* Запускаємо таймер при зміні значення isRunning на true
         const intervalId = setInterval(() => {
-            setSeconds(seconds + 1); //! ❌
-            // setSeconds(prevSeconds => prevSeconds + 1); //* ✅
+            // setSeconds(seconds + 1); //! ❌
+            setSeconds(prevSeconds => prevSeconds + 1); //* ✅
         }, 1000);
         console.log(`✅Таймер №${intervalId} запущено!`);
         

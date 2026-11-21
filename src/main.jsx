@@ -55,11 +55,12 @@ createRoot(document.getElementById('root')).render(
         {/* <AppHTTPRequestBasics /> */}
         {/* <AppHTTPRequestAdvanced /> */}
         {/* //! Hooks: useState */}
-        {/* <AppCounterHooks />  */}
+        <AppCounterHooks /> 
         {/* <AppColorBox /> */}
-        {/* //! Hooks: useEffect */}
+        {/* //! Hooks: useEffect як аналог componentDidMount() + componentDidUpdate() */}
         {/* <AppUseEffect1 /> */}
-        <AppUseEffect2 />
+        {/* //! Hooks: useEffect як аналог componentDidUpdate() + componentWillUnmount() */}
+        {/* <AppUseEffect2 /> */}
       </ThemeProvider>
     </BrowserRouter>
   </StrictMode>
