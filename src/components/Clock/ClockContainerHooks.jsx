@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ClockHooks } from './ClockHooks.jsx';
+import { ClockHooksUseRef } from './ClockHooksUseRef.jsx';
 
 
 export function ClockContainerHooks() {
@@ -62,6 +63,7 @@ export function ClockContainerHooks() {
 
             {/*//! Умовне монтування компонента Clock */}
             {isClockVisible && <ClockHooks />}
+            {/* {isClockVisible && <ClockHooksUseRef />} */}
         </div>
     );
 };
