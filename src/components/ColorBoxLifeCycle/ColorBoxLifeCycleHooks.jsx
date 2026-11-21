@@ -4,11 +4,25 @@ import css from "./ColorBoxLifeCycle.module.css";
 
 export function ColorBoxLifeCycleHooks({ colorBoxes }) {
     const [activeButtonIdx, setActiveButtonIdx] = useState(null);
-    //! 1.localStorage - Ініціалізація state з localStorage
-    //! Масив індексів обраних елементів
-    const [selectedButtonsIdx, setSelectedButtonsIdx] = useState(
-        JSON.parse(localStorage.getItem("selectedIdx")) || []
-    ); 
+    //todo: 1.localStorage - ЗВИЧАЙНА ініціалізація state з localStorage. Масив індексів обраних елементів
+    // const [selectedButtonsIdx, setSelectedButtonsIdx] = useState(
+    //     JSON.parse(localStorage.getItem("selectedIdx")) ?? []
+    // ); 
+
+    //! 1.localStorage - ЛІНИВА ініціалізація state з localStorage. Масив індексів обраних елементів
+    //! ----- Переваги ЛІНІВОЇ ініціалізації: -----
+    //!     1. Менше звернень до місцевоїпоставки.Не потрібно повторно читати збережені дані при кожному рендерингу.
+    //!     2. Менше зайвих обчислень.JSON.parse() виконується для початкового значення, а не при кожному рендерингу.
+    //!     3. Більш правильна ініціалізація стану.Початкове значення обчислюється тоді, коли React створює стан.
+    //todo: var.1
+    const [selectedButtonsIdx, setSelectedButtonsIdx] = useState(() => {
+        console.log("✴️Початкове значення selectedButtonsIdx");
+        return JSON.parse(localStorage.getItem("selectedIdx")) ?? [];
+    });
+    //todo: var.2
+    // const [selectedButtonsIdx, setSelectedButtonsIdx] = useState(
+    //     () => JSON.parse(localStorage.getItem("selectedIdx")) ?? []
+    // );
 
     //! 2.localStorage - Створення запису в localStorage під час першого запуску якщо його немає
     useEffect(() => {
