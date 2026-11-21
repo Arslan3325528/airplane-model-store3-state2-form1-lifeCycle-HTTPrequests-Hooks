@@ -8,6 +8,7 @@ import { ColorBox1HooksUseMemo } from '@/components/ColorBox/ColorBox-1-HooksUse
 
 import { ColorBoxLifeCycleClass } from '@/components/ColorBoxLifeCycle/ColorBoxLifeCycleClass.jsx';
 import { ColorBoxLifeCycleHooks } from '@/components/ColorBoxLifeCycle/ColorBoxLifeCycleHooks.jsx';
+import { ColorBoxLifeCycleHooksUseLocalStorage } from '@/components/ColorBoxLifeCycle/ColorBoxLifeCycleHooksUseLocalStorage.jsx';
 import { ColorBoxLifeCycleHooksUseRef } from '@/components/ColorBoxLifeCycle/ColorBoxLifeCycleHooksUseRef.jsx';
 
 
@@ -40,6 +41,7 @@ export function AppColorBox() {
       {/* //! Hooks: useState + useEffect + кастомні хуки */}
       {/* <ColorBoxLifeCycleClass colorBoxes={colorBoxOptions} /> */}
       <ColorBoxLifeCycleHooks colorBoxes={colorBoxOptions} />
+      <ColorBoxLifeCycleHooksUseLocalStorage colorBoxes={colorBoxOptions} />
       {/* <ColorBoxLifeCycleHooksUseRef colorBoxes={colorBoxOptions} /> */}
     </>
   )

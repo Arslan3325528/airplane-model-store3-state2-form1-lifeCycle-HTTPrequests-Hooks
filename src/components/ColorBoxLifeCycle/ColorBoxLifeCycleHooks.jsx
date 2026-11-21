@@ -3,26 +3,29 @@ import css from "./ColorBoxLifeCycle.module.css";
 
 
 export function ColorBoxLifeCycleHooks({ colorBoxes }) {
+    //! 1.0. Ініціалізація state "activeButtonIdx" з localStorage
     const [activeButtonIdx, setActiveButtonIdx] = useState(null);
-    //todo: 1.localStorage - ЗВИЧАЙНА ініціалізація state з localStorage. Масив індексів обраних елементів
+
+    //todo: 1.1.localStorage - ЗВИЧАЙНА ініціалізація state з localStorage. Масив індексів обраних елементів
     // const [selectedButtonsIdx, setSelectedButtonsIdx] = useState(
     //     JSON.parse(localStorage.getItem("selectedIdx")) ?? []
     // ); 
 
-    //! 1.localStorage - ЛІНИВА ініціалізація state з localStorage. Масив індексів обраних елементів
+    //! 1.2.localStorage - ЛІНИВА ініціалізація state з localStorage. Масив індексів обраних елементів
     //! ----- Переваги ЛІНІВОЇ ініціалізації: -----
     //!     1. Менше звернень до місцевоїпоставки.Не потрібно повторно читати збережені дані при кожному рендерингу.
     //!     2. Менше зайвих обчислень.JSON.parse() виконується для початкового значення, а не при кожному рендерингу.
     //!     3. Більш правильна ініціалізація стану.Початкове значення обчислюється тоді, коли React створює стан.
-    //todo: var.1
-    const [selectedButtonsIdx, setSelectedButtonsIdx] = useState(() => {
-        console.log("✴️Початкове значення selectedButtonsIdx");
-        return JSON.parse(localStorage.getItem("selectedIdx")) ?? [];
-    });
-    //todo: var.2
-    // const [selectedButtonsIdx, setSelectedButtonsIdx] = useState(
-    //     () => JSON.parse(localStorage.getItem("selectedIdx")) ?? []
-    // );
+    //todo: var.1 - варіант з явним поверненням
+    // const [selectedButtonsIdx, setSelectedButtonsIdx] = useState(() => {
+    //     console.log("✴️Початкове значення selectedButtonsIdx");
+    //     return JSON.parse(localStorage.getItem("selectedIdx")) ?? [];
+    // });
+
+    //todo: var.2 - скрочений варіант з неявним поверненням
+    const [selectedButtonsIdx, setSelectedButtonsIdx] = useState(() =>
+        JSON.parse(localStorage.getItem("selectedIdx")) ?? []
+    );
 
     //! 2.localStorage - Створення запису в localStorage під час першого запуску якщо його немає
     useEffect(() => {
@@ -61,11 +64,10 @@ export function ColorBoxLifeCycleHooks({ colorBoxes }) {
     }, [activeButtonIdx]);
 
 
-    //! 5.Функція вибору / видалення кольору
+    //! 5.Функція вибору/видалення кольору
     const setActiveIdx = index => {
         //! Перевіряємо наявність елемента зі значенням <index> у масиві індексів обраних елементів [selectedButtonsIdx]
         const exists = selectedButtonsIdx.includes(index);
-
         if (exists) {
             console.log("Такий індекс вже є,тоді ВИДАЛЯЄМО його!❌");
         } else {
