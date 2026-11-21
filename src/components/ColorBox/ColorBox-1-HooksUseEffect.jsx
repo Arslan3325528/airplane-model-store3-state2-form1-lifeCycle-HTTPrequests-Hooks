@@ -1,20 +1,59 @@
-import { useState, useMemo } from 'react';
+import { useState, useEffect } from 'react';
 import css from "./ColorBox.module.css";
 
 
-export function ColorBox1Hooks2({ colorBoxes }) {
+export function ColorBox1HooksUseEffect({ colorBoxes }) {
 
     const [activeButtonIdx, setActiveButtonIdx] = useState(null); //! індекс обраного елемента
     const [selectedButtonsIdx, setSelectedButtonsIdx] = useState([]); //! масив індексів обраних елементів
+    const [selectedColors, setSelectedColors] = useState([]); //! масив обраних елементів згідно масиву індексів
 
 
-    //! Формуємо та оновлюємо масив обраних елементів(кольорів) з useMemo
-    const selectedColors = useMemo(() => {
-        return selectedButtonsIdx.flatMap(item =>
-            colorBoxes.filter((el, idx) => idx === item)
-        );
+    //! Формуємо та оновлюємо масив обраних елементів(кольорів) з useEffect
+    //? ----- ЯК ПРАЦЮЄ ЦЕЙ КОД? -----
+    //? Тут одночасно використовуються три важливі механізми React та JavaScript:
+    //?     1. useEffect - виконує побічні ефекти після рендеру компонента.
+    //?     2. setSelectedColors – оновлює стан компонента.
+    //?     3. flatMap() і filter() - формують новий масив вибраних кольорів на основі індексів.
+    
+    useEffect(() => {
+        //todo: var.1
+        // const newSelectedColors = selectedButtonsIdx.flatMap(item =>
+        //     colorBoxes.filter((el, idx) => idx === item)
+        // );
+
+        //todo: var.2
+        // const newSelectedColors =
+        //     selectedButtonsIdx.map(item =>
+        //         colorBoxes.filter((el, idx) => idx === item)
+        //     )
+        //     .flat();
+
+        //todo: var.3
+        const newSelectedColors = selectedButtonsIdx.map(item => colorBoxes[item]);
+
+        //! Оновлюємо масив обраних елементів selectedColors
+        setSelectedColors(newSelectedColors);
+
     }, [selectedButtonsIdx, colorBoxes]);
 
+    //? У useEffect є два основних аргументи:
+    useEffect(
+        () => {
+            //! функция эффекта - Перший аргумент
+        },
+        ["залежності"] //! Другий аргумент
+    );
+    //? Перший аргумент – функція, яку React виконає після рендеру компонента.
+    //? Другий аргумент – масив залежностей, який повідомляє React, 
+    //? при зміні яких значень потрібно виконати ефект.
+    //? --- Це означає: ---
+    //?  - якщо зміниться selectedButtonsIdx, ефект виконається;
+    //?  - якщо зміниться colorBoxes, ефект також виконається;
+    //?  - якщо обидва значення залишаться незмінними, ефект повторно не виконається.
+    //? --- Коли спрацьовує ефект уперше? ---
+    //? При першому рендері, 
+    //? а також при зміні будь якого елемента з масиву залежностей
 
     const setActiveIdx = index => {
         //! Перевірка на наявність вже існуючого індексу
@@ -51,7 +90,7 @@ export function ColorBox1Hooks2({ colorBoxes }) {
         <div className={css.mainContainer}>
             {/*//! Блок вибору кольорів */}
             <div className={css.colorBoxContainer}>
-                ✅ColorBox1Hooks2 з useMemo
+                ✅ColorBox1Hooks1 з useEffect
                 <h2 className={css.colorBoxTitle}>Вибір кольорів</h2>
                 <p className={css.colorBoxDescription}>
                     Останній <u>доданий</u> колір:&nbsp;&nbsp;
@@ -112,4 +151,3 @@ export function ColorBox1Hooks2({ colorBoxes }) {
         </div>
     );
 };
-

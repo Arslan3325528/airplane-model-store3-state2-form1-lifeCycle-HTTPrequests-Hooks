@@ -3,8 +3,8 @@ import { ColorBox1Class } from '@/components/ColorBox/ColorBox-1-Class.jsx';
 import { ColorBox1Hooks } from '@/components/ColorBox/ColorBox-1-Hooks.jsx';
 import { ColorBox1HooksNew } from '@/components/ColorBox/ColorBox-1-HooksNew.jsx';
 
-import { ColorBox1Hooks1 } from '@/components/ColorBox/ColorBox-1-Hooks1.jsx';
-import { ColorBox1Hooks2 } from '@/components/ColorBox/ColorBox-1-Hooks2.jsx';
+import { ColorBox1HooksUseEffect } from '@/components/ColorBox/ColorBox-1-HooksUseEffect.jsx';
+import { ColorBox1HooksUseMemo } from '@/components/ColorBox/ColorBox-1-HooksUseMemo.jsx';
 
 import { ColorBoxLifeCycle } from '@/components/ColorBoxLifeCycle/ColorBoxLifeCycle.jsx';
 
@@ -26,13 +26,15 @@ export function AppColorBox() {
       {/* <ColorBox colorBoxes={colorBoxOptions} /> */}
       {/* <ColorBoxLifeCycle colorBoxes={colorBoxOptions} /> */}
 
-      {/* //! Hooks */}
+      {/* //! Hooks: useState*/}
       <ColorBox1Class colorBoxes={colorBoxOptions} />
       <ColorBox1Hooks colorBoxes={colorBoxOptions} />
       <ColorBox1HooksNew colorBoxes={colorBoxOptions} />
 
-      {/* <ColorBox1Hooks1 colorBoxes={colorBoxOptions} /> */}
-      {/* <ColorBox1Hooks2 colorBoxes={colorBoxOptions} /> */}
+      {/* //! Hooks: useState + useEffect */}
+      <ColorBox1HooksUseEffect colorBoxes={colorBoxOptions} />
+      {/* //! Hooks: useState + useMemo */}
+      <ColorBox1HooksUseMemo colorBoxes={colorBoxOptions} />
     </>
   )
 };
