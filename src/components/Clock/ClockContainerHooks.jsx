@@ -8,11 +8,10 @@ export function ClockContainerHooks() {
     const [isClockVisible, setIsClockVisible] = useState(false);
 
 
-    //! Аналог componentDidMount() / componentDidUpdate()
+    //! Аналог componentDidMount() / componentDidUpdate() - візуалізація роботи очищення useEffect
     useEffect(() => {
         console.log("🟢 ClockContainerHooks: useEffect");
         console.log(`ℹ️ Стан isClockVisible: ${isClockVisible}`);
-
         //! Функція очищення useEffect
         return () => {console.log("🔴 ClockContainerHooks: cleanup useEffect")};
     }, [isClockVisible]);
