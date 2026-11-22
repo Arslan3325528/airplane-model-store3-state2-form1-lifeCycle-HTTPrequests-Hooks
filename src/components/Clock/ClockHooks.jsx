@@ -6,7 +6,6 @@ export function ClockHooks() {
   //! Аналог state в Class Component
   const [time, setTime] = useState(new Date().toLocaleTimeString());
 
-
   //! Аналог componentDidMount() / componentDidUpdate() / componentWillUnmount()
   useEffect(() => {
     console.log('1️⃣❗️❗️❗️ ClockHooks useEffect1');
@@ -30,7 +29,6 @@ export function ClockHooks() {
       );
     };
   }, []);
-
 
   //! Аналог componentDidUpdate()
   useEffect(() => {

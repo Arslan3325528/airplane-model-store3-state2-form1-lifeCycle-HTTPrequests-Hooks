@@ -7,7 +7,6 @@ export function ClockContainerHooks() {
     //! Аналог state в Class Component
     const [isClockVisible, setIsClockVisible] = useState(false);
 
-
     //! Аналог componentDidMount() / componentDidUpdate() - візуалізація роботи очищення useEffect
     useEffect(() => {
         console.log("🟢 ClockContainerHooks: useEffect");
@@ -15,7 +14,6 @@ export function ClockContainerHooks() {
         //! Функція очищення useEffect
         return () => {console.log("🔴 ClockContainerHooks: cleanup useEffect")};
     }, [isClockVisible]);
-
 
     //! Створення та видалення компонента Clock
     const toggleClock = () => {
